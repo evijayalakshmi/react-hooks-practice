@@ -2,8 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import MainPage from './components/MainPage';
+import { UserProvider } from './UserContext';
 
 function App() {
+    const user = { name: "Lakshmi", loggedIn: true };
+
     return (
         <div className="App">
             <header className="App-header">
@@ -11,7 +14,9 @@ function App() {
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
-                <MainPage></MainPage>
+                <UserProvider value={user}>
+                    <MainPage></MainPage>
+                </UserProvider>
             </header>
         </div>
     );
