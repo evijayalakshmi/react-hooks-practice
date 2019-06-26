@@ -1,7 +1,5 @@
 import React, { useContext, useState } from 'react';
 import UserContext from '../UserContext';
-import ImageChangeOnMouseOver from './ImageChangeOnMouseOver';
-
 
 const HistoryInput = () => {
     const [inputText, setInputText] = useState("");
